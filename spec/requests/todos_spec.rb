@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Todos API', type: :request do
-    # initialize test data 
-    let!(:todos) { create_list(:todo, 10) }
-    let(:todo_id) { todos.first.id }
+  # initialize test data
+  let!(:todos) { create_list(:todo, 10) }
+  let(:todo_id) { todos.first.id }
 
-     # Test suite for GET /todos
+  # Test suite for GET /todos
   describe 'GET /todos' do
     # make HTTP get request before each example
     before { get '/todos' }
